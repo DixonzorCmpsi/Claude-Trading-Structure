@@ -1,0 +1,52 @@
+{
+  "watchlist": ["NQ1!", "MNQ1!"],
+  "default_timeframe": "240",
+
+  "bias_criteria": {
+    "bullish": [
+      "Ribbon direction is up (bullish colour)",
+      "Price is above the 20 EMA on the 4H",
+      "RSI is below 60 (room to run)",
+      "Price holding above prior day high or VWAP",
+      "Volume increasing on green candles"
+    ],
+    "bearish": [
+      "Ribbon direction is down (bearish colour)",
+      "Price is below the 20 EMA on the 4H",
+      "RSI is above 40 (room to drop)",
+      "Price rejected at prior day high or failing below VWAP",
+      "Volume increasing on red candles"
+    ],
+    "neutral": [
+      "Ribbon is flat or mixed",
+      "Price is chopping around the 20 EMA",
+      "RSI is between 45 and 55",
+      "Price oscillating around VWAP with no clear direction"
+    ]
+  },
+
+  "key_levels": [
+    "Prior day high/low/close",
+    "Overnight high/low",
+    "VWAP and VWAP bands",
+    "Opening range (first 15 min high/low)",
+    "Round numbers (e.g. 20000, 20500, 21000)"
+  ],
+
+  "risk_rules": [
+    "Only take trades where R:R is at least 1:2",
+    "No trading in the first 15 minutes after 9:30 AM ET open",
+    "Maximum 2 open MNQ contracts at once",
+    "If I have 2 losing trades in a row, stop for the day",
+    "Max risk per trade: 10 points on MNQ ($20 per contract)",
+    "Stop trading by 3:45 PM ET to avoid close volatility"
+  ],
+
+  "session_times": {
+    "pre_market": "6:00 AM - 9:30 AM ET",
+    "regular": "9:30 AM - 4:00 PM ET",
+    "best_hours": "9:45 AM - 11:30 AM ET and 2:00 PM - 3:30 PM ET"
+  },
+
+  "notes": "Beginner NASDAQ futures trader focused on MNQ. Using Robinhood for execution, TradingView for charting. Start with 1 contract only. Paper trade first."
+}
