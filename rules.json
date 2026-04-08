@@ -1,52 +1,113 @@
 {
-  "watchlist": ["NQ1!", "MNQ1!"],
+  "version": "2.0",
+  "last_updated": "2026-04-08",
+  "note": "Machine-readable mirror of rules.md. If these conflict, rules.md is authoritative.",
+
+  "account": {
+    "size": 250,
+    "currency": "USD",
+    "broker": "Tradovate",
+    "charting": "TradingView Desktop",
+    "instrument": "MNQ1!",
+    "exchange": "CME_MINI_DL"
+  },
+
+  "watchlist": ["MNQ1!", "NQ1!"],
   "default_timeframe": "240",
+
+  "risk_rules": {
+    "max_risk_per_trade_pct": 2,
+    "max_risk_per_trade_usd": 5.00,
+    "max_daily_loss_pct": 3,
+    "max_daily_loss_usd": 7.50,
+    "max_stop_points": 2.5,
+    "min_reward_to_risk": 2.0,
+    "max_contracts": 1,
+    "max_trades_per_day": 2,
+    "two_strike_rule": true,
+    "consecutive_losses_to_stop": 2
+  },
+
+  "mnq_specs": {
+    "tick_size": 0.25,
+    "tick_value_usd": 0.50,
+    "point_value_usd": 2.00,
+    "typical_spread": 0.75,
+    "round_trip_commission_usd": 1.54,
+    "intraday_margin_usd": 100
+  },
+
+  "session_times": {
+    "pre_market": "06:00-09:30 ET",
+    "regular": "09:30-16:00 ET",
+    "am_kill_zone": "09:50-10:10 ET",
+    "pm_kill_zone": "13:30-15:00 ET",
+    "dead_zone": "11:30-13:30 ET",
+    "hard_stop": "15:45 ET",
+    "no_trade_first_minutes": 20
+  },
 
   "bias_criteria": {
     "bullish": [
-      "Ribbon direction is up (bullish colour)",
-      "Price is above the 20 EMA on the 4H",
-      "RSI is below 60 (room to run)",
-      "Price holding above prior day high or VWAP",
+      "4H price above EMA 9 and EMA 21",
+      "4H MACD above signal line, histogram positive",
+      "1H trend aligned with 4H (higher highs, higher lows)",
+      "Price holding above VWAP",
       "Volume increasing on green candles"
     ],
     "bearish": [
-      "Ribbon direction is down (bearish colour)",
-      "Price is below the 20 EMA on the 4H",
-      "RSI is above 40 (room to drop)",
-      "Price rejected at prior day high or failing below VWAP",
+      "4H price below EMA 9 and EMA 21",
+      "4H MACD below signal line, histogram negative",
+      "1H trend aligned with 4H (lower highs, lower lows)",
+      "Price failing below VWAP",
       "Volume increasing on red candles"
     ],
-    "neutral": [
-      "Ribbon is flat or mixed",
-      "Price is chopping around the 20 EMA",
-      "RSI is between 45 and 55",
-      "Price oscillating around VWAP with no clear direction"
+    "neutral_no_trade": [
+      "4H EMAs flat or intertwined",
+      "4H MACD near zero with no clear direction",
+      "1H chopping with no structure",
+      "Price oscillating around VWAP"
     ]
   },
 
   "key_levels": [
-    "Prior day high/low/close",
+    "Prior day high (PDH)",
+    "Prior day low (PDL)",
+    "Prior day close (PDC)",
     "Overnight high/low",
-    "VWAP and VWAP bands",
+    "VWAP and standard deviation bands",
     "Opening range (first 15 min high/low)",
-    "Round numbers (e.g. 20000, 20500, 21000)"
+    "Round numbers (nearest 100-point levels)"
   ],
 
-  "risk_rules": [
-    "Only take trades where R:R is at least 1:2",
-    "No trading in the first 15 minutes after 9:30 AM ET open",
-    "Maximum 2 open MNQ contracts at once",
-    "If I have 2 losing trades in a row, stop for the day",
-    "Max risk per trade: 10 points on MNQ ($20 per contract)",
-    "Stop trading by 3:45 PM ET to avoid close volatility"
+  "tjr_system_checklist": [
+    "1. Determine 4H bias",
+    "2. Scale to 1H for trend alignment",
+    "3. Identify liquidity sweep (high/low taken)",
+    "4. Wait for break of structure (BOS) — candle CLOSE required",
+    "5. Identify third confluence (FVG, OB, breaker, equilibrium, BPR)",
+    "6. Wait for confirmation candle at confluence",
+    "7. Enter with stop at confluence boundary",
+    "8. Target high timeframe liquidity draw"
   ],
 
-  "session_times": {
-    "pre_market": "6:00 AM - 9:30 AM ET",
-    "regular": "9:30 AM - 4:00 PM ET",
-    "best_hours": "9:45 AM - 11:30 AM ET and 2:00 PM - 3:30 PM ET"
+  "psychology_flags": {
+    "revenge_keywords": ["make it back", "one more", "double down", "need to win"],
+    "fomo_keywords": ["moving without me", "missed it", "should I chase"],
+    "frustration_keywords": ["keep losing", "rigged", "should have"],
+    "mandatory_break_after_loss_minutes": 15,
+    "stop_trading_after_consecutive_losses": 2
   },
 
-  "notes": "Beginner NASDAQ futures trader focused on MNQ. Using Robinhood for execution, TradingView for charting. Start with 1 contract only. Paper trade first."
+  "scaling_levels": [
+    {"level": 1, "account_min": 250, "account_max": 500, "contracts": 1},
+    {"level": 2, "account_min": 500, "account_max": 1000, "contracts": 2},
+    {"level": 3, "account_min": 1000, "account_max": 2500, "contracts": 3},
+    {"level": 4, "account_min": 2500, "account_max": null, "contracts": 5}
+  ],
+
+  "floor_rule": {
+    "stop_live_trading_below": 200,
+    "message": "Account below $200 (20% drawdown). Switch to paper trading. Rebuild confidence."
+  }
 }
