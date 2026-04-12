@@ -43,10 +43,10 @@
     {
       "id": "merge",
       "label": "Merge",
-      "status": "active",
+      "status": "complete",
       "agent": "orchestrator",
       "started_at": "2026-04-12T05:58:43.089Z",
-      "completed_at": null
+      "completed_at": "2026-04-12T05:58:43.140Z"
     }
   ]
 }
