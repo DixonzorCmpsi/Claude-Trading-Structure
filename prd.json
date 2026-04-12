@@ -34,9 +34,9 @@
       "completed_at": null,
       "gate": {
         "type": "approval",
-        "decision": "pending",
-        "decided_by": null,
-        "decided_at": null,
+        "decision": "approved",
+        "decided_by": "review-agent",
+        "decided_at": "2026-04-12T05:58:43.015Z",
         "findings": []
       }
     },
