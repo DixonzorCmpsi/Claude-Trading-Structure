@@ -28,9 +28,9 @@
     {
       "id": "review",
       "label": "Review",
-      "status": "pending",
+      "status": "active",
       "agent": "review-agent",
-      "started_at": null,
+      "started_at": "2026-04-12T05:58:27.584Z",
       "completed_at": null,
       "gate": {
         "type": "approval",
