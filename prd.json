@@ -1,52 +1,49 @@
 {
-  "id": "task-a339127e",
-  "created_at": "2026-04-12T05:56:17.322Z",
+  "id": "task-01209fa9",
+  "created_at": "2026-04-12T06:06:52.584Z",
   "input": "how many files are in this dir",
-  "branch": "work/task-a339127e",
+  "branch": null,
   "phases": [
     {
       "id": "plan",
       "label": "Plan",
       "status": "complete",
       "agent": "orchestrator",
-      "started_at": "2026-04-12T05:56:17.321Z",
-      "completed_at": "2026-04-12T05:56:17.321Z"
+      "started_at": "2026-04-12T06:06:52.584Z",
+      "completed_at": "2026-04-12T06:06:52.584Z"
     },
     {
       "id": "code",
       "label": "Code",
-      "status": "complete",
+      "status": "pending",
       "agent": "coding-agent",
-      "started_at": "2026-04-12T05:56:17.382Z",
-      "completed_at": "2026-04-12T05:58:27.558Z",
-      "commits": [
-        "3564318"
-      ],
-      "files_changed": [],
-      "agent_response": "There are 23 files in this directory."
+      "started_at": null,
+      "completed_at": null,
+      "commits": [],
+      "files_changed": []
     },
     {
       "id": "review",
       "label": "Review",
-      "status": "complete",
+      "status": "pending",
       "agent": "review-agent",
-      "started_at": "2026-04-12T05:58:27.584Z",
-      "completed_at": "2026-04-12T05:58:43.064Z",
+      "started_at": null,
+      "completed_at": null,
       "gate": {
         "type": "approval",
-        "decision": "approved",
-        "decided_by": "review-agent",
-        "decided_at": "2026-04-12T05:58:43.015Z",
+        "decision": "pending",
+        "decided_by": null,
+        "decided_at": null,
         "findings": []
       }
     },
     {
       "id": "merge",
       "label": "Merge",
-      "status": "complete",
+      "status": "pending",
       "agent": "orchestrator",
-      "started_at": "2026-04-12T05:58:43.089Z",
-      "completed_at": "2026-04-12T05:58:43.140Z"
+      "started_at": null,
+      "completed_at": null
     }
   ]
 }
