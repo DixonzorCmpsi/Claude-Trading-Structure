@@ -28,10 +28,10 @@
     {
       "id": "review",
       "label": "Review",
-      "status": "active",
+      "status": "complete",
       "agent": "review-agent",
       "started_at": "2026-04-12T05:58:27.584Z",
-      "completed_at": null,
+      "completed_at": "2026-04-12T05:58:43.064Z",
       "gate": {
         "type": "approval",
         "decision": "approved",
