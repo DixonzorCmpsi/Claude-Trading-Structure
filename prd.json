@@ -15,11 +15,11 @@
     {
       "id": "respond",
       "label": "Respond",
-      "status": "active",
+      "status": "complete",
       "agent": "orchestrator",
       "started_at": "2026-04-12T06:08:56.260Z",
-      "completed_at": null,
-      "response": null
+      "completed_at": "2026-04-12T06:08:56.286Z",
+      "response": "There are 23 files and directories listed in this directory."
     }
   ]
 }
