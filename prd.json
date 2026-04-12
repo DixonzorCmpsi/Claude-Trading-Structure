@@ -15,9 +15,9 @@
     {
       "id": "respond",
       "label": "Respond",
-      "status": "pending",
+      "status": "active",
       "agent": "orchestrator",
-      "started_at": null,
+      "started_at": "2026-04-12T06:10:31.878Z",
       "completed_at": null,
       "response": null
     }
