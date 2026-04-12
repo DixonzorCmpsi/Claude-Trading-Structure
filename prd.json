@@ -1,49 +1,25 @@
 {
-  "id": "task-01209fa9",
-  "created_at": "2026-04-12T06:06:52.584Z",
+  "id": "task-f30fe173",
+  "created_at": "2026-04-12T06:08:56.215Z",
   "input": "how many files are in this dir",
-  "branch": "work/task-01209fa9",
+  "branch": null,
   "phases": [
     {
       "id": "plan",
       "label": "Plan",
       "status": "complete",
       "agent": "orchestrator",
-      "started_at": "2026-04-12T06:06:52.584Z",
-      "completed_at": "2026-04-12T06:06:52.584Z"
+      "started_at": "2026-04-12T06:08:56.214Z",
+      "completed_at": "2026-04-12T06:08:56.214Z"
     },
     {
-      "id": "code",
-      "label": "Code",
-      "status": "active",
-      "agent": "coding-agent",
-      "started_at": "2026-04-12T06:06:52.641Z",
-      "completed_at": null,
-      "commits": [],
-      "files_changed": []
-    },
-    {
-      "id": "review",
-      "label": "Review",
-      "status": "pending",
-      "agent": "review-agent",
-      "started_at": null,
-      "completed_at": null,
-      "gate": {
-        "type": "approval",
-        "decision": "pending",
-        "decided_by": null,
-        "decided_at": null,
-        "findings": []
-      }
-    },
-    {
-      "id": "merge",
-      "label": "Merge",
+      "id": "respond",
+      "label": "Respond",
       "status": "pending",
       "agent": "orchestrator",
       "started_at": null,
-      "completed_at": null
+      "completed_at": null,
+      "response": null
     }
   ]
 }
