@@ -15,12 +15,15 @@
     {
       "id": "code",
       "label": "Code",
-      "status": "active",
+      "status": "complete",
       "agent": "coding-agent",
       "started_at": "2026-04-12T05:56:17.382Z",
-      "completed_at": null,
-      "commits": [],
-      "files_changed": []
+      "completed_at": "2026-04-12T05:58:27.558Z",
+      "commits": [
+        "3564318"
+      ],
+      "files_changed": [],
+      "agent_response": "There are 23 files in this directory."
     },
     {
       "id": "review",
