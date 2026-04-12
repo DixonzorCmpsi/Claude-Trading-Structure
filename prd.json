@@ -2,7 +2,7 @@
   "id": "task-01209fa9",
   "created_at": "2026-04-12T06:06:52.584Z",
   "input": "how many files are in this dir",
-  "branch": null,
+  "branch": "work/task-01209fa9",
   "phases": [
     {
       "id": "plan",
@@ -15,9 +15,9 @@
     {
       "id": "code",
       "label": "Code",
-      "status": "pending",
+      "status": "active",
       "agent": "coding-agent",
-      "started_at": null,
+      "started_at": "2026-04-12T06:06:52.641Z",
       "completed_at": null,
       "commits": [],
       "files_changed": []
