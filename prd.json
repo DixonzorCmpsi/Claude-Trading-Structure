@@ -1,0 +1,49 @@
+{
+  "id": "task-a339127e",
+  "created_at": "2026-04-12T05:56:17.322Z",
+  "input": "how many files are in this dir",
+  "branch": null,
+  "phases": [
+    {
+      "id": "plan",
+      "label": "Plan",
+      "status": "complete",
+      "agent": "orchestrator",
+      "started_at": "2026-04-12T05:56:17.321Z",
+      "completed_at": "2026-04-12T05:56:17.321Z"
+    },
+    {
+      "id": "code",
+      "label": "Code",
+      "status": "pending",
+      "agent": "coding-agent",
+      "started_at": null,
+      "completed_at": null,
+      "commits": [],
+      "files_changed": []
+    },
+    {
+      "id": "review",
+      "label": "Review",
+      "status": "pending",
+      "agent": "review-agent",
+      "started_at": null,
+      "completed_at": null,
+      "gate": {
+        "type": "approval",
+        "decision": "pending",
+        "decided_by": null,
+        "decided_at": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "merge",
+      "label": "Merge",
+      "status": "pending",
+      "agent": "orchestrator",
+      "started_at": null,
+      "completed_at": null
+    }
+  ]
+}
