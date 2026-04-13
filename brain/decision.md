@@ -40,11 +40,17 @@ Critical checks:
 - R16: Pre-trade checklist complete → Pass/Fail
 - ANY failure → **FAIL** → DECISION: NO TRADE with specific rule cited.
 
-### Gate 3: SETUP (from brain/analysis.md)
-Is there a valid, complete setup?
-- All TJR system steps satisfied → **PASS**
-- Setup exists but incomplete → DECISION: **WAIT**
-- No setup → **FAIL** → DECISION: NO TRADE
+### Gate 3: SETUP (from brain/specialization.md + brain/analysis.md)
+Is there a valid VWAP + FVG Confluence Sniper setup?
+Run the 5-checkbox system from specialization.md:
+- [ ] 4H trend matches trade direction?
+- [ ] Price at or near VWAP?
+- [ ] FVG (gap) present at this level?
+- [ ] RSI confirms (below 40 for buys, above 60 for sells)?
+- [ ] Bounce/rejection candle confirmed?
+- All 5 boxes checked → **PASS**
+- Some boxes checked, others developing → DECISION: **WAIT**
+- Setup doesn't match our specialization → **FAIL** → DECISION: NO TRADE
 
 ### Gate 4: RISK MATH (from brain/analysis.md)
 Does the trade math work for our account?
